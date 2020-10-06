@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Student Timetable</string>
+
+    <string-array name="main_menu_title_array">
+        <item>View Timetable</item>
+        <item>View Subjects</item>
+        <item>Options</item>
+    </string-array>
+
+    <string-array name="main_menu_desc_array">
+        <item>View your Timetable</item>
+        <item>View your Subjects info</item>
+        <item>Open Options</item>
+    </string-array>
+</resources>
