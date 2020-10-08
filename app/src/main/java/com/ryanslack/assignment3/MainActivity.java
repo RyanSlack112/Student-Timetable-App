@@ -2,9 +2,14 @@ package com.ryanslack.assignment3;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import androidx.appcompat.widget.Toolbar;
+
+import com.ryanslack.assignment3.adapters.ListAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -31,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupToolbar()
     {
         setSupportActionBar(toolbarMain);
-        getSupportActionBar().setTitle("Student Timetable");
+        getSupportActionBar().setTitle("View Timetable");
     }
 
     private void setupListView()
@@ -41,5 +46,24 @@ public class MainActivity extends AppCompatActivity {
 
         ListAdapter listAdapter = new ListAdapter(this, titles, descriptions);
         listviewMain.setAdapter(listAdapter);
+
+        listviewMain.setOnItemClickListener(new AdapterView.OnItemClickListener()
+        {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l)
+            {
+                switch(i)
+                {
+                    case 0:
+                    {
+                        Intent intent = new Intent(MainActivity.this, TimetableMain.class);
+                        startActivity(intent);
+                        break;
+                    }
+                    case 1: break;
+                    case 2: break;
+                }
+            }
+        });
     }
 }
