@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:background="@color/colorAccent"
+    android:elevation="4dp"
+    >
+
+    <RelativeLayout
+        android:id="@+id/layoutCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.ryanslack.assignment3.utilities.LetterImageView
+            android:id="@+id/cardSubjectLiv"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="10dp" />
+
+        <TextView
+            android:id="@+id/cardSubjectTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/cardSubjectLiv"
+            android:text="Subject"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btnDeleteSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/cardSubjectTv"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:text="@string/delete" />
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

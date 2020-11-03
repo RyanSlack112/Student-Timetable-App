@@ -66,7 +66,7 @@ public class ListAdapter extends BaseAdapter
         {
             mImageView.setImageResource(R.drawable.img_subjects);
         }
-        else if(mTitleArray[i].equalsIgnoreCase("Options"))
+        else if(mTitleArray[i].equalsIgnoreCase("Add Subject"))
         {
             mImageView.setImageResource(R.drawable.img_options);
         }
